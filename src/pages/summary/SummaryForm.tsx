@@ -1,11 +1,17 @@
 import { useState } from "react";
-import { Button, Form } from "react-bootstrap";
+import { Button, Form, OverlayTrigger, Tooltip } from "react-bootstrap";
 
 const SummaryForm = () => {
   const [isEnableButton, setEnableButton] = useState(false);
   const checkBoxLable = (
     <span>
-      I agree to <span style={{ color: "blue" }}>Terms and Conditions</span>
+      I agree to{" "}
+      <OverlayTrigger
+        overlay={<Tooltip>no ice cream will actually be delivered</Tooltip>}
+        placement="right"
+      >
+        <span style={{ color: "blue" }}>Terms and Conditions</span>
+      </OverlayTrigger>
     </span>
   );
   return (
