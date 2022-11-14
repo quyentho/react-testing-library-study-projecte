@@ -8,7 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // TODO: To add your global css here
 import "./index.css";
 
-import { server } from "./mocks/server.js";
+import { server } from "./mocks/server";
 
 jestPreviewConfigure({ autoPreview: true });
 // src/setupTests.js

@@ -1,35 +1,28 @@
 module.exports = {
-  "roots": [
-    "<rootDir>/src"
-  ],
-  "collectCoverageFrom": [
-    "src/**/*.{js,jsx,ts,tsx}",
-    "!src/**/*.d.ts"
-  ],
-  "setupFiles": [
-    "react-app-polyfill/jsdom"
-  ],
-  "setupFilesAfterEnv": [
-    "<rootDir>/src/setupTests.ts"
-  ],
-  "testMatch": [
+  roots: ["<rootDir>/src"],
+  collectCoverageFrom: ["src/**/*.{js,jsx,ts,tsx}", "!src/**/*.d.ts"],
+  setupFiles: ["react-app-polyfill/jsdom"],
+  setupFilesAfterEnv: ["<rootDir>/src/setupTests.ts"],
+  testMatch: [
     "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
-    "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
+    "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}",
   ],
-  "testEnvironment": "jsdom",
-  "transform": {
-    "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "react-scripts/config/jest/babelTransform.js",
+  testEnvironment: "jsdom",
+  transform: {
+    "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$":
+      "react-scripts/config/jest/babelTransform.js",
     "^.+\\.(css|scss|sass|less)$": "jest-preview/transforms/css",
-    "^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)": "jest-preview/transforms/file"
+    "^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)":
+      "jest-preview/transforms/file",
   },
-  "transformIgnorePatterns": [
-    "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$"
+  transformIgnorePatterns: [
+    "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$",
   ],
-  "modulePaths": [],
-  "moduleNameMapper": {
-    "^react-native$": "react-native-web"
+  modulePaths: [],
+  moduleNameMapper: {
+    "^react-native$": "react-native-web",
   },
-  "moduleFileExtensions": [
+  moduleFileExtensions: [
     "web.js",
     "js",
     "web.ts",
@@ -39,11 +32,11 @@ module.exports = {
     "json",
     "web.jsx",
     "jsx",
-    "node"
+    "node",
   ],
-  "watchPlugins": [
+  watchPlugins: [
     "jest-watch-typeahead/filename",
-    "jest-watch-typeahead/testname"
+    "jest-watch-typeahead/testname",
   ],
-  "resetMocks": true
-}
+  resetMocks: true,
+};

@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Button, Form, OverlayTrigger, Tooltip } from "react-bootstrap";
+import { AddonContextProvider } from "../../contexts/AddonContext";
+import { OrderEntry } from "../entry/OrderEntry";
 
 const SummaryForm = () => {
   const [isEnableButton, setEnableButton] = useState(false);
@@ -25,6 +27,9 @@ const SummaryForm = () => {
         ></Form.Check>
       </Form.Group>
       <Button disabled={!isEnableButton}>Confirm order</Button>
+      <AddonContextProvider>
+        <OrderEntry></OrderEntry>
+      </AddonContextProvider>
     </Form>
   );
 };
